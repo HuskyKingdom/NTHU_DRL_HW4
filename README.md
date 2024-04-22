@@ -47,12 +47,13 @@ Then clone it to your local environment:
 git clone <Your forked repo> 
 ```
 
-Now replace `112062892_hw4_test.py` and `112062892_hw4_data.py` in the repo with your own version of them. The following packages were installed by default in repo cloud environment:
+Now replace `112062892_hw4_test.py` and `112062892_hw4_data` in the repo with your own version of them. The following packages were installed by default in repo cloud environment:
 
 - Python 3.6.1
 - tdqm
 - requests
 - osim-rl
+- scipy
 - torch (CPU)
 
 If you wish to add more dependencies inorder to run your code, please add them into `requirements.txt`, each raw for one dependency.
@@ -86,5 +87,4 @@ Pushing to the repo will trigger the following procedure:
 This might need some time since the leaderboard are running on CPU, you could check the progress of it by clicking the orange dot showing in below [Top left near "submission" in the pic.] then in the pop-up window clike "details", if the any of above workflow fails, you could view details in it.
 
 <img src="docs/example.png">
-<img src="docs/lb_example.png">
 
