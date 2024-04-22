@@ -18,9 +18,9 @@ jobs:
         auto-activate-base: false
         miniconda-version: "latest"
 
-    - name: 2. Installing dependencies
+    - name: 2.Installing dependencies
       run: |
         pip install -r requirements.txt
-        
-    - name: 3. Running your code & Pushing to Leaderboard
-      run: python eval.py --token a91aae52cff9ef65932db06b150ffd47
+
+    - name: 3.Running your code & Pushing to Leaderboard
+      run: conda run -n opensim-rl python eval.py --token a91aae52cff9ef65932db06b150ffd47
