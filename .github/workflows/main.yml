@@ -20,7 +20,7 @@ jobs:
 
     - name: 2.Installing dependencies
       run: |
-        pip install -r requirements.txt
+        conda run -n opensim-rl pip install -r requirements.txt
 
     - name: 3.Running your code & Pushing to Leaderboard
       run: conda run -n opensim-rl python eval.py --token a91aae52cff9ef65932db06b150ffd47
