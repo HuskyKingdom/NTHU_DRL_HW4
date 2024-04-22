@@ -1,0 +1,26 @@
+name: Conda Environment Setup
+
+on: [push]
+
+jobs:
+  setup-conda:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: 1.Setup Miniconda
+      uses: conda-incubator/setup-miniconda@v2
+      with:
+        activate-environment: opensim-rl
+        environment-file: environment.yml
+        python-version: 3.6.1
+        auto-activate-base: false
+        miniconda-version: "latest"
+
+    - name: 2. Installing dependencies
+      run: |
+        pip install -r requirements.txt
+        
+    - name: 3. Running your code & Pushing to Leaderboard
+      run: python eval.py --token a91aae52cff9ef65932db06b150ffd47
