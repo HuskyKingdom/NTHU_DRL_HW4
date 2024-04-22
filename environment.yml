@@ -1,0 +1,12 @@
+name: opensim-rl
+channels:
+  - conda-forge
+  - kidzik
+  - defaults
+dependencies:
+  - python=3.6.1
+  - opensim
+  - lapack
+  - git
+  - pip:
+    - osim-rl
