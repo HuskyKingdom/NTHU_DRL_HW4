@@ -7,7 +7,7 @@ import argparse
 from osim.env import L2M2019Env
 
 
-env = L2M2019Env(visualize=False，difficulty=2)
+env = L2M2019Env(visualize=False,difficulty=2)
 
 
 
