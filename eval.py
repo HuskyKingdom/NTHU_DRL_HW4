@@ -56,21 +56,29 @@ total_reward = 0
 total_time = 0
 agent = Agent()
 time_limit = 120
+max_timesteps = env.spec.timestep_limit
 
 for episode in tqdm(range(10), desc="Evaluating"):
     obs = env.reset()
     start_time = time.time()
     episode_reward = 0
+    timestep = 0
     
     while True:
         action = agent.act(obs) 
 
         obs, reward, done, info = env.step(action)
         episode_reward += reward
+        timestep += 1
+
+        if timestep >= max_timesteps:
+            print(f"Max timestep reached for episode {episode}")
+            break
 
         if time.time() - start_time > time_limit:
             print(f"Time limit reached for episode {episode}")
             break
+        
 
         if done:
             break
