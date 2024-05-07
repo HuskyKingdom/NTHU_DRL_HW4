@@ -80,7 +80,7 @@ for episode in tqdm(range(10), desc="Evaluating"):
     total_time += (end_time - start_time)
 
 
-score = total_reward / 50
+score = total_reward / 10
 print(f"Final Score: {score}")
 
 # push to leaderboard
