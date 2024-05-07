@@ -38,7 +38,7 @@ for book in root.findall('info'):
     sub_name =  book.find('name').text
 
 # initializing agent
-agent_path = sub_name + "_hw2_test.py"
+agent_path = sub_name + "_hw4_test.py"
 module_name = agent_path.replace('/', '.').replace('.py', '')
 spec = importlib.util.spec_from_file_location(module_name, agent_path)
 module = importlib.util.module_from_spec(spec)
