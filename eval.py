@@ -56,7 +56,7 @@ total_reward = 0
 total_time = 0
 agent = Agent()
 time_limit = 120
-max_timesteps = env.spec.timestep_limit
+max_timesteps = env.spec.timestep_limit - 1 
 
 for episode in tqdm(range(10), desc="Evaluating"):
     obs = env.reset()
